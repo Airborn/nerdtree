@@ -3317,10 +3317,8 @@ function! s:renderView()
     endif
 
     "add the 'up a dir' line
-    if !g:NERDTreeMinimalUI
-        call setline(line(".")+1, s:tree_up_dir_line)
-        call cursor(line(".")+1, col("."))
-    endif
+	call setline(line(".")+1, s:tree_up_dir_line)
+	call cursor(line(".")+1, col("."))
 
     "draw the header line
     let header = b:NERDTreeRoot.path.str({'format': 'UI', 'truncateTo': winwidth(0)})
